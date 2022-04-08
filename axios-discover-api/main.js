@@ -35,22 +35,31 @@ function updateUser(id, userUpdate)
     .then(response => console.log(response))
     .catch(error => console.error(error))
 }
+
+function deleteUser(id){
+    axios.delete(`${url}/${id}`)
+    .then(response => console.log(response))
+    .catch(error => console.error(error))
+}
+
+deleteUser(2)
+
 const userUpdate = {
     name: "andrew garfield",
     avatar: "https://tm.ibxk.com.br/2022/04/07/07155452791307.jpg",
     city: "nova york"
 }
 
-updateUser(3, userUpdate)
-
-//getUsers()
-
-//getUser(2)
-
-//addNewUser()
-
 const newUser = { name: "Peter Parker",
 avatar: "https://tm.ibxk.com.br/2022/04/07/07155452791307.jpg",
 city:"Nova York"}
     
 
+getUsers()
+
+getUser(1)
+
+
+//updateUser(3, userUpdate)
+
+//addNewUser()
